@@ -36,9 +36,9 @@ export default async function (server, database) {
   client = new bq.BigQuery(dbConfig)
   logger().debug('bigquery client created ', client)
   knex = knexlib({
-        client: BigQueryClient,
-        connection: { ...dbConfig }
-      });
+    client: BigQueryClient,
+    connection: { ...dbConfig }
+  });
 
   // light solution to test connection with with a simple query
   const results = await driverExecuteQuery(client, { query: 'SELECT CURRENT_TIMESTAMP()' });

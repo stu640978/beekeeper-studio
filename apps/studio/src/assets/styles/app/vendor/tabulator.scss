@@ -824,6 +824,10 @@ $columnResizeGuideColor: mix($query-editor-bg, $theme-base, 80%);
         color: $statusbar-text;
       }
     }
+
+    .flip {
+      transform: rotate(180deg);
+    }
   }
 
   input[type="number"] {

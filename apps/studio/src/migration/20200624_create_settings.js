@@ -20,11 +20,11 @@ export default {
         "version" integer NOT NULL DEFAULT 0
       )
     `,
-    `INSERT INTO user_setting(key, defaultValue, linuxDefault, windowsDefault) VALUES
+      `INSERT INTO user_setting(key, defaultValue, linuxDefault, windowsDefault) VALUES
     ('theme', 'dark', 'dark', null),
     ('menuStyle', 'native', null, 'client')
     `,
-    `
+      `
       CREATE TRIGGER prevent_settings_deletion
       BEFORE DELETE ON user_setting
       BEGIN
